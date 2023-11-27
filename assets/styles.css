@@ -1,0 +1,177 @@
+body {
+  background-color: #d4d8dc;
+  font-family: Arial, sans-serif;
+}
+
+/* atomic classes */
+
+.container-fluid {
+  max-width: 100%;
+  height: calc(100vh - 16px);
+  padding: 0px 30px;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.px-2 {
+  padding: 0 2rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-sm {
+  font-size: small;
+}
+
+.text-grey {
+  color: grey;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.divider {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.template-preview {
+  flex-direction: row;
+  height: 100%;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.template {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: 70%;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.char-length {
+  right: 0.625rem;
+  top: 0.63rem;
+  color: #888888;
+}
+
+.editor {
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid #e6e6e6;
+  padding: 0.625rem;
+  width: 100%;
+}
+
+.editor:focus {
+  border: #1c64f2;
+  outline-color: #1c64f2;
+}
+
+.template-header {
+  margin-top: 10px;
+}
+
+.preview {
+  width: 25%;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.preview-header {
+  background-color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.preview-body {
+  padding: 15px;
+  background-color: #e2d8d0;
+}
+
+.preview-card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 10px 20px 10px;
+}
+
+.preview-card-triangle {
+  position: absolute;
+  left: -6.5px;
+  top: -1px;
+}
+
+.timestamp {
+  bottom: 5px;
+  right: 10px;
+  color: #888888;
+}
+
+.preview .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.preview .message {
+  margin-bottom: 10px;
+}
+
+.preview .footer {
+  font-size: 12px;
+  color: #888888;
+}

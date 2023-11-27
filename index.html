@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>WhatsApp Message Preview Generator</title>
+    <meta
+      name="description"
+      content="WhatsApp message content preview generator"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="d-flex justify-between template-preview">
+        <div class="template px-2">
+          <h2>Edit Template</h2>
+          <div class="divider"></div>
+          <div class="w-full mb-3">
+            <div class="d-flex">
+              <h4 class="mr-2">Header</h4>
+              <span class="d-flex align-center text-sm">Optional</span>
+            </div>
+            <div class="relative">
+              <input
+                class="editor text-sm"
+                type="text"
+                id="header"
+                maxlength="60"
+              />
+              <span class="absolute char-length text-sm" id="header-length"
+                >0/60</span
+              >
+            </div>
+          </div>
+          <div class="w-full mb-3">
+            <h4>Body</h4>
+            <p class="text-grey">
+              Enter the text for your message in the language you've selected.
+            </p>
+            <div class="relative mb-1">
+              <textarea
+                class="editor text-sm"
+                id="content"
+                rows="4"
+                maxlength="1024"
+              ></textarea>
+              <span class="absolute char-length text-sm" id="content-length"
+                >0/1024</span
+              >
+            </div>
+            <p class="text-sm text-grey" id="content-characters-length">
+              Characters: 0/1024
+            </p>
+          </div>
+          <div class="w-full mb-4">
+            <div class="d-flex align-center">
+              <h4 class="mr-2">Footer</h4>
+              <span class="d-flex align-center text-sm">Optional</span>
+            </div>
+            <p class="text-grey">
+              Add a short line of text to the bottom of your message template.
+              If you add opt-out marketing button, the associated footer will be
+              shown here by default.
+            </p>
+            <div class="relative">
+              <input
+                class="editor text-sm"
+                type="type"
+                id="footer"
+                maxlength="60"
+              />
+              <span class="absolute char-length text-sm" id="footer-length"
+                >0/60</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="preview">
+          <div class="preview-header p-1">Message Preview</div>
+          <div class="preview-body">
+            <div class="preview-card relative">
+              <span class="preview-card-triangle"
+                ><svg
+                  viewBox="0 0 8 13"
+                  height="15"
+                  width="8"
+                  preserveAspectRatio="xMidYMid meet"
+                  version="1.1"
+                  x="0px"
+                  y="0px"
+                  enable-background="new 0 0 8 13"
+                >
+                  <path
+                    opacity="0.13"
+                    fill="#0000000"
+                    d="M1.533,3.568L8,12.193V1H2.812 C1.042,1,0.474,2.156,1.533,3.568z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M1.533,2.568L8,11.193V0L2.812,0C1.042,0,0.474,1.156,1.533,2.568z"
+                  ></path></svg
+              ></span>
+              <div class="title break-words" id="preview-header"></div>
+              <div class="message break-words" id="preview-content"></div>
+              <div class="footer break-words" id="preview-footer"></div>
+              <div class="absolute timestamp text-sm" id="timestamp"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
